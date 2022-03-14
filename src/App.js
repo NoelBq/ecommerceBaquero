@@ -1,16 +1,14 @@
 
 import './App.css';
+import { Button } from '@material-ui/core'
+import NavBar from './components/NavBar'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      
-        <p>
-           <code>Ecommerce Baquero</code> 
-        </p>
-
-      </header>
+        <NavBar />
+    
     </div>
   );
 }
