@@ -1,7 +1,6 @@
 
 import './App.css';
-import { Button } from '@material-ui/core'
-import NavBar from './components/NavBar'
+import NavBar from './components/navBar/NavBar'
 
 
 function App() {
