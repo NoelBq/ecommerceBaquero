@@ -1,32 +1,9 @@
-/* color nav #F4F1EB */
-/* Font */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 
-/* Design */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: #ecf9ff;
-}
-
-body {
-  color: #272727;
-  font-family: 'Quicksand', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-}
-
-.product_section{
+.products_section{
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 100px;
 }
-
 
 
 img {
@@ -44,6 +21,7 @@ img {
   font-weight: 400;
   display: block;
   width: 100%;
+  margin: 0 auto;
   cursor: pointer;
   border: 1px solid #DCA57D;
   background: #DCA57D;
@@ -130,6 +108,8 @@ increace/decreace btn */
     height: 1.5rem;
     line-height: 1;
   }
+
+
   .qty-input .product-qty:focus,
   .qty-input .qty-count:focus {
     outline: none;
