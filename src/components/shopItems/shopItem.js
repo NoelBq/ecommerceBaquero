@@ -1,8 +1,10 @@
 
 import React from 'react'
+import ItemCount from './ItemCount';
 
 function ShopItem(props) {
-  {console.log(props.greeting)}
+   
+
   return (
     <>
              <li className="cards_item">
@@ -13,11 +15,7 @@ function ShopItem(props) {
                         <p className='card_title'>{props.greeting}</p>
                         <p className="card_text">Sabor a toffee y chocolate</p>
                         <p className="card_text">$700</p>
-                        <div className="qty-input">
-                            <button className="qty-count qty-count--minus" data-action="minus" type="button">-</button>
-                            <p className="product-qty">1</p>
-                            <button className="qty-count qty-count--add" data-action="add" type="button">+</button>
-                        </div>
+                        <ItemCount stock={12} initial={1}/>
                         <button className="btn card_btn">Agregar</button>
                     </div>
                 </div>
