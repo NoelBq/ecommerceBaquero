@@ -9,8 +9,9 @@ function App() {
   return (
     <div className="App">
         <NavBar />
+        <div className='main'>
         <ItemListContainer  />
-
+        </div>
     </div>
   );
 }

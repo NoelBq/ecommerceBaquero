@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
+import AddIcon from '@mui/icons-material/Add';
 
 
 export default function ItemCount(props) {
 
-  const [counter, setCount] = useState(0)
+  const [counter, setCount] = useState(props.initial)
 
    const onAdd = () => { 
        setCount(counter + 1);
@@ -25,10 +26,12 @@ export default function ItemCount(props) {
 
 
     return (
+        
+
         <div className="qty-input">
             <button onClick={onLess} className="qty-count qty-count--minus" data-action="minus" type="button">-</button>
             <p className="product-qty">{counter}</p>
-            <button onClick={itemCount} className="qty-count qty-count--add" data-action="add" type="button">+</button>
+            <button  disabled={props.stock === 0 ? true : null} onClick={itemCount} className="qty-count qty-count--add" data-action="add" type="button">+</button>
         </div>
     )
 }

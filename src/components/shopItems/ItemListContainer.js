@@ -7,6 +7,8 @@ function ItemListContainer() {
         <div className="products_section">
             <ul className="cards">
                 <ShopItem  greeting="greetings from parent component"/>
+                <ShopItem  greeting="greetings from parent component"/>
+                <ShopItem  greeting="greetings from parent component"/>
             </ul>
         </div>
     )

@@ -24,7 +24,7 @@ function NavBar() {
              < CartWidget />
           </li>
         </ul>
-          <h1 className='logo'>Coffe Corner   <CoffeeIcon /></h1> 
+          <h3 className='logo'>Minimal</h3> 
         
       </div>
     </nav>
