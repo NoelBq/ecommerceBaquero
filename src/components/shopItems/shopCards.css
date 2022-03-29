@@ -168,31 +168,16 @@ increace/decreace btn */
     cursor: pointer;
     width: 2.5rem;
     font-size: 1.25em;
-    text-indent: -100px;
     overflow: hidden;
-    position: relative;
-  }
-  .qty-input .qty-count:before, .qty-input .qty-count:after {
-    content: "";
-    height: 2px;
-    width: 10px;
-    position: absolute;
-    display: block;
-    background: var(--font-color);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    
   }
 
   .qty-input .qty-count--add:after {
     transform: rotate(90deg);
   }
   .qty-input .qty-count:disabled {
-    color: blue;
-    background-color: blue;
-    background: transparent;
+    color: white;
+    background-color: #716F81;
     cursor: not-allowed;
     border-color: transparent;
   }

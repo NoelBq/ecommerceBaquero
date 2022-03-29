@@ -1,0 +1,50 @@
+[
+    {
+        "id":  1,
+        "title": "Culprit T-Shirt" ,
+        "description": "Remera gris con estampa blanca",
+        "price": 1200,
+        "stock": 23,
+        "image": "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    }, 
+    {
+        "id": 2,
+        "title": "Stripped Sweater" ,
+        "description": "Sweater sintetico Rayado",
+        "price": 4500,
+        "stock": 12,
+        "image": "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    }, 
+    {
+        "id": 3,
+        "title": "Black T" ,
+        "description": "Remera basica negra",
+        "price": 1500,
+        "stock":0,
+        "image": "https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    }, 
+    {
+        "id": 4,
+        "title": "Plain T" ,
+        "description": "Remera basica blanca",
+        "price": 1500,
+        "stock": 23,
+        "image": "https://images.pexels.com/photos/8532607/pexels-photo-8532607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    }, 
+    {
+        "id": 5,
+        "title": "Black Hoodie" ,
+        "description": "Hoodie negro de plush",
+        "price": 8500,
+        "stock": 23,
+        "image": "https://images.pexels.com/photos/6311473/pexels-photo-6311473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    }, 
+    {
+        "id":  6 ,
+        "title": "Trasher T" ,
+        "description": "Remera manga larga estampada",
+        "price": 4200,
+        "stock": 23,
+        "image": "https://images.pexels.com/photos/1230656/pexels-photo-1230656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    }
+]
