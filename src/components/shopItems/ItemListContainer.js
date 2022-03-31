@@ -4,10 +4,13 @@ import './shopCards.css'
 
 function ItemListContainer() {
     return (
-        <div className="products_section">
-            <ItemList/>
-        
+        <div>
+            <div className="products_section">
+                <ItemList />
+
+            </div>
         </div>
+
     )
 }
 

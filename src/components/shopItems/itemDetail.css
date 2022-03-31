@@ -1,0 +1,116 @@
+:root {
+    --font-color: #333333;
+    --card-color: #efeff2;
+    --btn-color: #c0bac7;
+  }
+  
+.product-main {
+    max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+    
+
+}
+
+
+  .product-top {
+    display: flex;
+    margin: 1em;
+    position: relative;
+    flex-direction: column;
+  }
+  
+  .product__sizes {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .product__sizes span {
+    height: 30px;
+    width: 30px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+  }
+  
+  
+  .product__info h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .product__price {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .product__short {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .product__desc {
+    position: sticky;
+    top: 0;
+    padding: 10vh 0 10vh 5vh;
+  }
+  
+  .product__btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid #c0bac7;
+    background: var(--btn-color);
+    letter-spacing: 0.3em;
+  }
+  .product__btn:hover {
+    background-color: #7F748E;
+  }
+  .product__btn:hover::after, .product__btn:hover::before {
+    transform: scale(1, 1);
+  }
+  .product__btn::after, .product__btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: all 0.5s;
+  }
+  .product__btn::after {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    transform: scale(1, 0);
+    transform-origin: center;
+  }
+  .product__btn::before {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transform: scale(0, 1);
+    transform-origin: center;
+  }
+  
+  .product__type {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+ 
+  @media (min-width: 768px) {
+   
+        .product-top {
+            display: flex;
+            flex-direction: row;
+          }
+    
+  }
