@@ -4,8 +4,8 @@
 	--nav-font-size: 12px;
 }
 
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines {
+.custom-navbar input[type="checkbox"],
+.custom-navbar .hamburger-lines {
   display: none;
 }
 
@@ -15,7 +15,7 @@
   margin: auto;
 }
 
-.navbar {
+.custom-navbar {
   position: fixed;
   width: 100%;
   background: var(--nav-background);
@@ -29,7 +29,8 @@
   justify-content: space-between;
   align-items: center;
   height: 64px;
-}
+  padding: 1.5em;
+} 
 
 .menu-items {
   order: 2;
@@ -51,7 +52,7 @@
   align-items: center;
 }
 
-.navbar a {
+.custom-navbar a {
   color: var(--nav-font-color);
   text-decoration: none;
   font-weight: 500;
@@ -59,9 +60,36 @@
 }
 
 
-.navbar a:hover {
+.custom-navbar a:hover {
   color: #2A3439;
 }
+
+
+.dropdown .btn {
+  background: none;
+  border: none;
+  color: var(--nav-font-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+
+}
+
+.dropdown a {
+  color: var(--nav-font-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+.dropdown a:hover {
+  color: #2A3439;
+  background: transparent;
+}
+
+
 
 @media (max-width: 768px) {
   .navbar-container input[type="checkbox"],
@@ -123,7 +151,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  .navbar .menu-items {
+  .custom-navbar .menu-items {
     padding-top: 100px;
     background: var(--nav-background);
     height: 100vh;
@@ -137,7 +165,7 @@
     overflow: scroll;
   }
 
-  .navbar .menu-items li {
+  .custom-navbar .menu-items li {
     margin-bottom: 1.8rem;
     font-size: 1rem;
     font-weight: 500;

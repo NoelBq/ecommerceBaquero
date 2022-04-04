@@ -1,13 +1,15 @@
 
 import React, { useEffect } from 'react'
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom'
 
-function ShopItem({title, image, description, price, stock, key}) {
+function ShopItem({title, image, description, price, stock, id}) {
   
   return (
     <>
+      {console.log(id)}
              <li className="cards_item">
-                <div className="card">
+                <div className="product_card">
                     <div className="card_image">
                       <img alt="product-img" src={image}/>
                     </div>
@@ -16,7 +18,7 @@ function ShopItem({title, image, description, price, stock, key}) {
                         <p className="card_text">{description}</p>
                         <p className="price">${price}</p>
                         <ItemCount stock={stock} initial={1}/>
-                        <button className="btn card_btn">Agregar</button>
+                        <Link to={`/product/${id}`}><button className="btn card_btn">Agregar</button></Link>
                     </div>
                 </div>
             </li>

@@ -1,56 +1,70 @@
 
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import ShopItem from './ShopItem';
 import Spinner from '../loader/Spinner';
 
 export default function ItemList() {
 
-let url = "https://run.mocky.io/v3/850f5f77-8be1-402d-8db3-dc608c36b91a";
 
- const [products, setProducts] = useState([]);
+  let url = "https://run.mocky.io/v3/192610dc-1c1a-431c-8c74-405e915b2e41";
 
-  const getProducts = async () => {
-      try {
-           setTimeout(async () => { 
-               const response = await fetch(url);
-               const data =  await response.json();
-               setProducts(data)               
-            }, 2000)
-            
-      } catch (error) {
-          console.error(error);
-      }
+  const { categoria } = useParams();
+
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true)
+
+  const getProducts = async (category) => {
+    try {
+      setLoading(true)
+      setTimeout(async () => {
+        const response = await fetch(url);
+        let data = await response.json();
+        if (category) {
+          data = data.filter(prod => prod.category.toLowerCase() == categoria.toLowerCase());
+        }
+        setProducts(data)
+        setLoading(false)
+        console.log(data)
+      }, 2000)
+
+    } catch (error) {
+      console.error(error);
+    }
   }
 
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    setProducts([])
+    getProducts(categoria);
+    console.log(products)
+  }, [categoria]);
 
 
 
   return (
-      
+
     <>
-    
-        <ul className="cards">
-              {
-                  products.length ? (
-                      products.map((product) =>
-                        <ShopItem
-                        title={product.title}
-                        image={product.image}
-                        description={product.description}
-                        price={product.price}
-                        stock={product.stock}
-                        key={product.id}
-                      />
-                      )
-                  ) : (
-                    <Spinner />
-                  )
-              }
-       </ul>
+
+      <ul className="cards">
+        {
+          !loading ? (
+            products.map((product) =>
+              <ShopItem
+                title={product.title}
+                image={product.image}
+                description={product.description}
+                price={product.price}
+                stock={product.stock}
+                id={product.id}
+                key={product.id}
+              />
+            )
+          ) : (
+            <Spinner />
+          )
+        }
+      </ul>
     </>
   )
 }

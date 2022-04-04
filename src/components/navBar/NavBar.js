@@ -1,15 +1,16 @@
 
 import React from 'react'
 import './navBar.css'
-import CoffeeIcon from '@mui/icons-material/Coffee';
 import CartWidget from './CartWidget';
+import DropDown from '../dropdown/DropDown';
+import { Link } from 'react-router-dom'
 
 
 function NavBar() {
     return (
 
-        <nav className="navbar">
-      <div className="navbar-container container">
+        <nav className="custom-navbar">
+      <div className="navbar-container">
         <input type="checkbox" name="" id=""  defaultValue={''}/ >
         <div className="hamburger-lines">
           <span className="line line1"></span>
@@ -17,14 +18,17 @@ function NavBar() {
           <span className="line line3"></span>
         </div>
         <ul className="menu-items">
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Nosotros</a></li>
+
+          <li><DropDown/></li>
+          <li><Link to={'/contacto'}>Contacto</Link></li>
+          <li><Link to={'/nosotros'}>Nosotros</Link></li>
+
           <li>
-             < CartWidget />
+             <CartWidget />
           </li>
         </ul>
-          <h3 className='logo'>Minimal</h3> 
+          <Link to={'/'}><h3 className='logo'>Minimal</h3></Link>
+         
         
       </div>
     </nav>

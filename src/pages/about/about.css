@@ -1,0 +1,72 @@
+:root {
+    --font-color: #333333;
+    --card-color: #efeff2;
+    --btn-color: #c0bac7;
+    --light-font-color:  #cacaca;
+  }
+
+
+.about-heading {
+    text-transform: uppercase;
+    color: var(--btn-color);
+  }
+  
+  .about-text {
+     margin-top: 1em;
+    text-align: justify;
+    color: var(--light-font-color); 
+  }
+ 
+  .about-section {
+    display: flex;
+    flex-direction: columns;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    
+  }
+   
+  
+
+  .intro {
+    margin: auto;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    margin-top: 2em;
+  }
+  
+  .about-btn {
+    display: block;
+    margin-top: 1em;
+    padding: 1.2em 3em;
+    border-radius: 2px;
+    border: 1px solid #ecf0f1;
+    background: var(--btn-color);
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  } 
+  
+  .about-btn:hover {
+    border: 1px solid #111;
+    background: var(--font-color);
+    color: #fff;
+  }
+  
+  .about-btn:focus {
+    border: 1px solid #111;
+    background: #111;
+    color: #fff;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .intro {
+      width: 80%;
+    }
+  } 

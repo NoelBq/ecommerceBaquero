@@ -1,0 +1,36 @@
+:root {
+    --font-color: #333333;
+    --card-color: #efeff2;
+    --btn-color: #c0bac7;
+  }
+
+.main-error{
+    display: table;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.fof{
+	  display: table-cell;
+	  vertical-align: middle;
+}
+
+.fof h1{
+      color: var(--btn-color);
+	  font-size: 50px;
+	  display: inline-block;
+	  padding-right: 12px;
+	  animation: type .5s alternate infinite;
+}
+
+.fof h3{
+    color: var(--btn-color);
+    font-size: 20px;
+    padding-right: 12px;
+}
+
+@keyframes type{
+	  from{box-shadow: inset -3px 0px 0px #888;}
+	  to{box-shadow: inset -3px 0px 0px transparent;}
+}

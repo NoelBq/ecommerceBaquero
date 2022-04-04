@@ -50,7 +50,7 @@ img {
 }
 
 
-.card {
+.product_card {
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -59,7 +59,7 @@ img {
   overflow: hidden;
 }
 
-.card:hover {
+.product_card:hover {
   transition: 0.2s ease-in;
   transform: translateY(-10px);
   box-shadow: 0px 45px 60px 0px rgba(0, 0, 0, 0.087);
@@ -68,6 +68,10 @@ img {
 .card_content {
   padding: 0.8rem;
   background: var(--card-color)
+}
+
+.card_content a {
+  text-decoration: none;
 }
 
 .card_title {
