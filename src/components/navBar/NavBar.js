@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom'
 
 
 function NavBar() {
-    return (
+  return (
 
-        <nav className="custom-navbar">
+    <nav className="custom-navbar">
       <div className="navbar-container">
-        <input type="checkbox" name="" id=""  defaultValue={''}/ >
+        <input type="checkbox" name="" id="" defaultValue={''} />
         <div className="hamburger-lines">
           <span className="line line1"></span>
           <span className="line line2"></span>
@@ -19,21 +19,19 @@ function NavBar() {
         </div>
         <ul className="menu-items">
 
-          <li><DropDown/></li>
+          <li><DropDown /></li>
           <li><Link to={'/contacto'}>Contacto</Link></li>
           <li><Link to={'/nosotros'}>Nosotros</Link></li>
 
           <li>
-             <CartWidget />
+            <CartWidget />
           </li>
         </ul>
-          <Link to={'/'}><h3 className='logo'>Minimal</h3></Link>
-         
-        
+        <Link to={'/'}><h3 className='logo'>Minimal</h3></Link>
       </div>
     </nav>
 
-    )
+  )
 }
 
 export default NavBar
