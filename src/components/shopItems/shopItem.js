@@ -18,7 +18,7 @@ function ShopItem({title, image, description, price, stock, id}) {
                         <p className="card_text">{description}</p>
                         <p className="price">${price}</p>
                         <ItemCount stock={stock} initial={1}/>
-                        <Link to={`/product/${id}`}><button className="btn card_btn">Agregar</button></Link>
+                        <Link to={`/product/${id}`}><button className="btn card_btn">Ver mas</button></Link>
                     </div>
                 </div>
             </li>
