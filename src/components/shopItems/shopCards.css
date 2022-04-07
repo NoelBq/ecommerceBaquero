@@ -185,6 +185,10 @@ increace/decreace btn */
     cursor: not-allowed;
     border-color: transparent;
   }
+
+.btn-link {
+  text-decoration: none;
+}
 /* 
 medias */
 

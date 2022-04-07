@@ -12,23 +12,29 @@ import {
   Route,
 } from "react-router-dom";
 import NotFound from './pages/notFound/NotFound';
+import Cart from './components/cart/Cart';
 
 
 function App() {
 
   return (
     <div className="App">
+    
       <Router>
+       
         <NavBar />
         <Routes>
           <Route exact={true} path="/" element={<Home />} />
           <Route exact={true} path="/product/:id" element={<ItemDetailContainer />} />
           <Route exact={true} path="/contacto" element={<Contact />} />
           <Route exact={true} path="/nosotros" element={<About />} />
+          <Route exact={true} path="/cart" element={<Cart />} />
           <Route exact={true} path={"/categories/:categoria"} element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+
       </Router>
+    
     </div>
   );
 }

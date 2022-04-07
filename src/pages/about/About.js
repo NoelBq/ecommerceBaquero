@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' 
+
 import './about.css'
 
 export default function About() {
@@ -14,6 +15,7 @@ export default function About() {
 
                 
                 <Link to={'/'} className="about-btn" href="#">Shop</Link>
+        
             </div>
         </section>
     )

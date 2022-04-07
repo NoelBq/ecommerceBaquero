@@ -26,7 +26,7 @@ export default function ItemList() {
         setProducts(data)
         setLoading(false)
         console.log(data)
-      }, 2000)
+      }, 100)
 
     } catch (error) {
       console.error(error);
