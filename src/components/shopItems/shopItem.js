@@ -4,12 +4,11 @@ import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom'
 import CartContext from '../../context/CartContext';
 import InfoIcon from '@mui/icons-material/Info';
-import { CookieSharp } from '@mui/icons-material';
 
 function ShopItem({product}) {
   const {title, image, description, price, stock, id} = product
   const [counter, setCount] = useState(1)
-  const { cartProducts, addProductsToCart} = useContext(CartContext);
+  const { addProductsToCart} = useContext(CartContext);
 
 
   const onLess = (evt) => {

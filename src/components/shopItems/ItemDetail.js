@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
+import CartContext from '../../context/CartContext'
 
-export default function ItemDetail(props) {
+export default function ItemDetail({product}) {
 
+    const { title, description, price, stock, image} = product
     const [counter, setCount] = useState(1)
+
+    const {  addProductsToCart} = useContext(CartContext);
 
     const onLess = (evt) => {
         evt.stopPropagation();
@@ -17,7 +21,13 @@ export default function ItemDetail(props) {
         setCount(counter + 1);
     }
 
-    const {id, title, description, price, stock, image} = props.product
+
+    const addToCart = (e) => {
+        e.stopPropagation()
+        addProductsToCart({...product, quantity: counter})
+      }
+    
+    
     return (
 
         <div className='product-main'> 
@@ -45,9 +55,7 @@ export default function ItemDetail(props) {
                             counter={counter} 
                             initial={1} />
                         ) : <div></div>}
-                        <Link  className="btn-link" to={'/cart'}>
-                          <button className="product__btn">Comprar</button>
-                        </Link>
+                          <button onClick={addToCart}  className="product__btn">Comprar</button>
                     </div>
                 </div>
             </div>

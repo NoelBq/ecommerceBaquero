@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 
 export default function ItemCount({stock, onAdd, onLess, counter}) {
@@ -12,11 +12,7 @@ export default function ItemCount({stock, onAdd, onLess, counter}) {
        }
     }
 
-    
-
     return (
-        
-
         <div className="qty-input">
             <button onClick={onLess} className="qty-count qty-count--minus" data-action="minus" type="button">-</button>
             <p className="product-qty">{counter}</p>
