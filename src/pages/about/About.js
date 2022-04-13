@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom' 
+import CartContext from '../../context/CartContext'
+
 
 import './about.css'
 
 export default function About() {
+
+    const {cartProducts} = useContext(CartContext)
+    console.log(cartProducts)
     return (
         <section className='about-section'>
             <div className="intro">

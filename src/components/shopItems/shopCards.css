@@ -36,6 +36,7 @@ img {
   background-color: #7F748E;
 }
 
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -74,6 +75,13 @@ img {
   text-decoration: none;
 }
 
+.cart_heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 .card_title {
   color: var(--font-color);
   font-size: 1.1rem;
@@ -87,6 +95,23 @@ img {
   letter-spacing: 0.1em;
   width: calc(100%-20px);
 }
+
+.detail-btn {
+  cursor: pointer;
+  border: 1px solid #c0bac7;
+  color: var(--btn-color);
+  letter-spacing: 0.3em;
+  border: none;
+  padding: 0.5em;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.detail-btn:hover {
+color: #7F748E;
+}
+
+
 
 .card_text {
   color: var(--font-color);

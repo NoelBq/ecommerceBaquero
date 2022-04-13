@@ -1,0 +1,66 @@
+.container {
+    padding: 2rem 0rem;
+  }
+  
+  .table-image thead td,
+  .table-image thead th {
+    border: 0;
+    color: #666;
+    font-size: 0.8rem;
+  }
+  .table-image td,
+  .table-image th {
+    vertical-align: middle;
+    text-align: center;
+  }
+  .table-image td.qty,
+  .table-image th.qty {
+    max-width: 2rem;
+  }
+  
+  .modal-price {
+    margin-left: 1rem;
+
+  }
+  
+  .modal-footer {
+    border: none;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 0rem;
+    margin: 0 auto;
+  }
+
+  .btn-modal-footer {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid #c0bac7;
+    background: var(--btn-color);
+    letter-spacing: 0.3em;
+    margin-right: 1em;
+  }
+
+  .btn-checkout a {
+    color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid #c0bac7;
+  background: var(--btn-color);
+  letter-spacing: 0.3em;
+  
+  }

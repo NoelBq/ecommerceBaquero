@@ -3,7 +3,7 @@ import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 
 export default function ItemDetail(props) {
-    // console.log(product)
+
     const [counter, setCount] = useState(1)
 
     const onLess = (evt) => {

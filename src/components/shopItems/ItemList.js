@@ -51,12 +51,7 @@ export default function ItemList() {
           !loading ? (
             products.map((product) =>
               <ShopItem
-                title={product.title}
-                image={product.image}
-                description={product.description}
-                price={product.price}
-                stock={product.stock}
-                id={product.id}
+                product={product}
                 key={product.id}
               />
             )

@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './components/navBar/NavBar'
-import ItemListContainer from './components/shopItems/ItemListContainer';
+
 import Home from './pages/Home';
 import ItemDetailContainer from './components/shopItems/ItemDetailContainer';
 import Contact from './pages/contact/Contact';
@@ -12,14 +12,16 @@ import {
   Route,
 } from "react-router-dom";
 import NotFound from './pages/notFound/NotFound';
-import Cart from './components/cart/Cart';
+import Cart from './pages/cart/Cart';
+import { CartProvider } from './context/CartContext'
 
 
 function App() {
 
   return (
     <div className="App">
-    
+
+    <CartProvider>
       <Router>
        
         <NavBar />
@@ -34,7 +36,7 @@ function App() {
         </Routes>
 
       </Router>
-    
+      </CartProvider>
     </div>
   );
 }

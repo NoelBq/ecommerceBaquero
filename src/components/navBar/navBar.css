@@ -2,6 +2,9 @@
 	--nav-background: #ffff;
 	--nav-font-color: #cacaca;
 	--nav-font-size: 12px;
+  --font-color: #333333;
+  --card-color: #efeff2;
+  --btn-color: #c0bac7;
 }
 
 .custom-navbar input[type="checkbox"],
@@ -42,6 +45,18 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 0.3em;
+}
+
+.cart-widget {
+  display: flex;
+  position: relative;
+}
+
+.cart-widget p {
+  margin: 0;
+  position: relative;
+  top: -9px;
+  font-size: 17px;
 }
 
 .menu-items li {
@@ -182,6 +197,10 @@
     right: 15px;
     font-size: 1.7rem;
   }
+
+  /* .badge {
+    
+  } */
 
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);

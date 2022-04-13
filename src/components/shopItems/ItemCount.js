@@ -12,6 +12,8 @@ export default function ItemCount({stock, onAdd, onLess, counter}) {
        }
     }
 
+    
+
     return (
         
 
