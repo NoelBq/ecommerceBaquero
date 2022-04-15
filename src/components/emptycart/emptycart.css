@@ -1,0 +1,49 @@
+:root {
+    --font-color: #333333;
+    --card-color: #efeff2;
+    --btn-color: #c0bac7;
+    --light-font-color:  #cacaca;
+  }
+
+
+.empty-cart-container {
+    display: flex;
+    flex-direction: columns;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.empty-cart-text {
+    padding: 1em;
+}
+
+.empty-cart-btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid #c0bac7;
+  background: var(--btn-color);
+  letter-spacing: 0.3em; 
+}
+
+.empty-cart-btn:hover {
+    background-color: #7F748E;
+    color: white;
+  }
+  
+
+.empty-cart-heading {
+    padding: 1.5em;
+}
+
+.empty-cart-container a {
+    text-decoration: none;
+}

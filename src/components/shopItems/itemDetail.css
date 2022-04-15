@@ -16,7 +16,6 @@
   .product-top {
     display: flex;
     margin: 1em;
-    position: relative;
     flex-direction: column;
   }
   
@@ -55,7 +54,6 @@
   }
   
   .product__desc {
-    position: sticky;
     top: 0;
     padding: 10vh 0 10vh 5vh;
   }

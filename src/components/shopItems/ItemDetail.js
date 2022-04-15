@@ -1,19 +1,18 @@
 import React, { useState, useContext } from 'react'
 import ItemCount from './ItemCount'
-import { Link } from 'react-router-dom'
 import CartContext from '../../context/CartContext'
 
-export default function ItemDetail({product}) {
+export default function ItemDetail({ product }) {
 
-    const { title, description, price, stock, image} = product
+    const { title, description, price, stock, image } = product
     const [counter, setCount] = useState(1)
 
-    const {  addProductsToCart} = useContext(CartContext);
+    const { addProductsToCart } = useContext(CartContext);
 
     const onLess = (evt) => {
         evt.stopPropagation();
-        if(counter > 0) {
-         setCount(counter - 1);
+        if (counter > 0) {
+            setCount(counter - 1);
         }
     }
 
@@ -24,16 +23,23 @@ export default function ItemDetail({product}) {
 
     const addToCart = (e) => {
         e.stopPropagation()
-        addProductsToCart({...product, quantity: counter})
-      }
-    
-    
+        addProductsToCart({ ...product, quantity: counter })
+    }
+
+
     return (
 
-        <div className='product-main'> 
+        <div className='product-main'>
             <div className="product-top">
                 <div className="product__gallery">
-                    <img src={image} alt="productImg"/>
+                    {image ? (
+                        <img src={image} alt="productImg" />
+
+                    ) : (
+                        <div class="spinner-grow" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    )}
                 </div>
                 <div className="product__info">
                     <div className="product__desc">
@@ -49,16 +55,16 @@ export default function ItemDetail({product}) {
                             <span>L</span>
                         </div>
                         {stock ? (<ItemCount
-                            onAdd={onAdd} 
-                            onLess={onLess} 
-                            stock={stock} 
-                            counter={counter} 
+                            onAdd={onAdd}
+                            onLess={onLess}
+                            stock={stock}
+                            counter={counter}
                             initial={1} />
                         ) : <div></div>}
-                          <button onClick={addToCart}  className="product__btn">Comprar</button>
+                        <button onClick={addToCart} className="product__btn">Comprar</button>
                     </div>
                 </div>
             </div>
         </div>
-  )
+    )
 }
