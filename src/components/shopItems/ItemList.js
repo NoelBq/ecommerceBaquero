@@ -3,11 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import ShopItem from './ShopItem';
 import Spinner from '../loader/Spinner';
+import { collection, query, where, getDocs } from "firebase/firestore";
+import db from '../../firebaseconfig'
 
 export default function ItemList() {
-
-
-  let url = "https://run.mocky.io/v3/192610dc-1c1a-431c-8c74-405e915b2e41";
 
   const { categoria } = useParams();
 
@@ -17,16 +16,26 @@ export default function ItemList() {
   const getProducts = async (category) => {
     try {
       setLoading(true)
-      setTimeout(async () => {
-        const response = await fetch(url);
-        let data = await response.json();
-        if (category) {
-          data = data.filter(prod => prod.category.toLowerCase() == categoria.toLowerCase());
-        }
-        setProducts(data)
-        setLoading(false)
-        console.log(data)
-      }, 100)
+      const productsColection = collection(db, 'products');
+      const productsSnapShot = await getDocs(productsColection)
+      let data = productsSnapShot.docs.map((doc) => {
+        let prod = doc.data()
+        prod.id = doc.id
+        return prod
+      })
+
+      if (category) {
+        const q = query(collection(db, "products"), where("category", "==", category));
+        const querySnapshot = await getDocs(q);
+        data = querySnapshot.docs.map((doc) => {
+          let prod = doc.data()
+          prod.id = doc.id
+          return prod
+        });
+
+      }
+      setProducts(data)
+      setLoading(false)
 
     } catch (error) {
       console.error(error);
@@ -37,7 +46,6 @@ export default function ItemList() {
   useEffect(() => {
     setProducts([])
     getProducts(categoria);
-    console.log(products)
   }, [categoria]);
 
 

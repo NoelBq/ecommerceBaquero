@@ -35,6 +35,10 @@
     justify-content: center;
     border: 1px solid #000;
   }
+
+  .product__info {
+    width: 100%;
+  }
   
   
   .product__info h1 {
@@ -84,11 +88,20 @@
   }
   
  
+  @media (min-width: 580px) {
+  
+ .product__info {
+   width: 60%;
+ }
+}
+
   @media (min-width: 768px) {
    
         .product-top {
             display: flex;
             flex-direction: row;
           }
-    
+     .product__info {
+       width: 50%;
+     }
   }
