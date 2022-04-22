@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react'
-import EndPurchase from '../clienteinfomodal/EndPurchase'
+
 import CartContext from '../../context/CartContext'
-import db from '../../firebaseconfig '
+import db from '../../firebaseconfig'
+import './clientinfo.css'
+import EndPurchase from '../ordercreated/EndPurchase'
 import {addDoc , collection} from 'firebase/firestore'
 
 function ClientInfo() {
@@ -38,39 +40,40 @@ function ClientInfo() {
       [name]: value
     }
     )
-    console.log(formData)
   }
 
-  const haddleSubmit = (e) => {
+  console.log(formData)
+
+  const haddleSubmit = (e) => { 
     e.preventDefault();
     setOrder({
       ...order, 
       client: formData
     })
+    console.log(order)
     createOrder()
+    emptyCart()
+    setOkPurchase(true)
   }
 
   const createOrder = async() => {
+    let pastOrder = { ...order, 
+      client: formData
+    }
     const orderDTO = collection(db, 'orders')
-     const orderFirebase = await addDoc(orderDTO, order)
+     const orderFirebase = await addDoc(orderDTO, pastOrder)
     console.log('orden generada', orderFirebase)
+    console.log(orderFirebase.id)
   }
 
 
-  const okPurchaseHaddler = (e) => {
-    e.preventDefault()
-    setOkPurchase(true)
-    console.log(okPurchase)
-  }
 
   useEffect(() => {
   }, [okPurchase]);
-x
   console.log(formData)
   console.log(order)
 
   return (
-
 
     <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog">
@@ -79,8 +82,10 @@ x
             <h5 className="modal-title" id="exampleModalLabel">Completa tus datos</h5>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+ 
           <div className="modal-body">
-            <form  onSubmit={haddleSubmit} mid="contact" action="" method="post">
+          <EndPurchase/>
+            <form  onSubmit={haddleSubmit} id="contact" action="" method="post">
               <fieldset>
                 <input name="name" className="form-input" placeholder="Nombre" type="text" tabIndex="1" required autoFocus onChange={handleFormData} />
               </fieldset>
@@ -91,7 +96,7 @@ x
                 <input name="phone" className="form-input" placeholder="Telefono" type="tel" tabIndex="3" required onChange={handleFormData} />
               </fieldset>
               <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+                <button name="submit" type="submit" id="contact-submit">Enviar</button>
               </fieldset>
             </form>
           </div>
