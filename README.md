@@ -1,6 +1,5 @@
 
 # Introduction
-- <img src="/public/favicon.ico alt="icon" style="height: 100px; width:100px;"/>
 - Minimal is an ecommerce project for Coderhouse's ReactJS Course using ReactJS and Firebase
 
 ## :ledger: Index
