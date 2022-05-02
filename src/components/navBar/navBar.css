@@ -79,6 +79,21 @@
   color: #2A3439;
 }
 
+.nav-btn {
+  color: var(--nav-font-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  border: none;
+  background-color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.nav-btn a:hover {
+  color: #2A3439;
+}
+
 
 .dropdown .btn {
   background: none;

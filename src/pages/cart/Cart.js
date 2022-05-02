@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect, useState} from 'react'
+import React, { useContext, useEffect} from 'react'
 import CheckoutTop from '../../components/checkout/CheckoutTop'
 import CheckoutItem from '../../components/checkout/ CheckoutItem'
 import CartContext from '../../context/CartContext'
@@ -11,25 +11,17 @@ import ClientInfo from '../../components/clientinfo/ClientInfo'
 
 export default function Cart() {
 
-    const [success, setSuccess] = useState(false)
+
     const { cartProducts, deleteProduct, totalSum, emptyCart } = useContext(CartContext)
 
 
     const totalSumCart = (e) => {
         return totalSum()
     }
-    console.log(success)
-    const endPurchase = () => {
-        setSuccess(true)
-        console.log(success)
-    }
-
-
+  
     useEffect(() => {
     }, [cartProducts]);
 
-    
-    console.log(totalSum)
 
     return (
         <>

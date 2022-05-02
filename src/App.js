@@ -4,7 +4,6 @@ import NavBar from './components/navBar/NavBar'
 
 import Home from './pages/Home';
 import ItemDetailContainer from './components/shopItems/ItemDetailContainer';
-import Contact from './pages/contact/Contact';
 import About from './pages/about/About';
 import {
   BrowserRouter as Router,
@@ -14,6 +13,7 @@ import {
 import NotFound from './pages/notFound/NotFound';
 import Cart from './pages/cart/Cart';
 import { CartProvider } from './context/CartContext'
+import EndPurchase from './components/ordercreated/EndPurchase';
 
 
 function App() {
@@ -28,10 +28,10 @@ function App() {
         <Routes>
           <Route exact={true} path="/" element={<Home />} />
           <Route exact={true} path="/product/:id" element={<ItemDetailContainer />} />
-          <Route exact={true} path="/contacto" element={<Contact />} />
           <Route exact={true} path="/nosotros" element={<About />} />
           <Route exact={true} path="/cart" element={<Cart />} />
           <Route exact={true} path={"/categories/:categoria"} element={<Home />} />
+          <Route exact={true} path={"/checkout"} element={<EndPurchase />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

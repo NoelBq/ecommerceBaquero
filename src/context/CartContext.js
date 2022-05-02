@@ -9,7 +9,6 @@
     const addProductsToCart = (product) => {
         
         if (isInCart(product.id)) {
-            console.log('is IN Cart');
             const prod = cartProducts.find((p) => p.id === product.id);
             const { quantity } = prod;
             
@@ -17,13 +16,11 @@
             const cartDTO = [ ...cartProducts ];
             setCartProducts(cartDTO);
         } else {
-            console.log('Is NOT in Cart');
             setCartProducts(cartProducts => [ ...cartProducts, product]);
         }
     }
 
     useEffect(() => {
-        console.log(cartProducts);
       }, [cartProducts]);
     
     const isInCart = (id) => {
@@ -31,7 +28,6 @@
     }
     
     const deleteProduct = (id) => {
-        console.log("delete from context");
         return setCartProducts(cartProducts.filter(p => p.id !== id));
     }
     
@@ -44,8 +40,6 @@
         return total
         
     }
-
-
     
     const dataDTO = {
         cartProducts,

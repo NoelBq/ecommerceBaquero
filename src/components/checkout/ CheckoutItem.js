@@ -8,7 +8,6 @@ function CheckoutItem({cartProduct, deleteProduct, totalSumCart}) {
 
     const removeProductFromCart = (e) => {
         e.stopPropagation()
-        console.log(id);
         deleteProduct(id);
       }
 

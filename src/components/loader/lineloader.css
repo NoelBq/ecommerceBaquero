@@ -1,0 +1,37 @@
+
+.line-loader {
+  display: flex;
+  padding: 2px;
+  margin: 1px;
+  justify-content: space-between;
+}
+.loader__item {
+  background: black;
+  width: 10px;
+  height: 10px;
+  animation: 1000ms boxAnimation infinite;
+}
+.loader__item:nth-of-type(2) {
+  animation-delay: 200ms;
+}
+.loader__item:nth-of-type(3) {
+  animation-delay: 400ms;
+}
+.loader__item:nth-of-type(4) {
+  animation-delay: 600ms;
+}
+.loader__item:nth-of-type(5) {
+  animation-delay: 800ms;
+}
+
+@keyframes boxAnimation {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

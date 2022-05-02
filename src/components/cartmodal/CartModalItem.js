@@ -7,7 +7,6 @@ function CartModalItem({cartProduct, deleteProduct, totalSum}) {
 
     const removeProductFromCart = (e) => {
         e.stopPropagation()
-        console.log(id);
         deleteProduct(id);
       }
 
