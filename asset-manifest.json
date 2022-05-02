@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ecommerceBaquero/static/css/main.41143d95.css",
+    "main.js": "/ecommerceBaquero/static/js/main.2162eafc.js",
+    "index.html": "/ecommerceBaquero/index.html",
+    "main.41143d95.css.map": "/ecommerceBaquero/static/css/main.41143d95.css.map",
+    "main.2162eafc.js.map": "/ecommerceBaquero/static/js/main.2162eafc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41143d95.css",
+    "static/js/main.2162eafc.js"
+  ]
+}
