@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import ShopItem from './ShopItem';
+import ShopItem from '../shopItems/ShopItem';
 import Spinner from '../loader/Spinner';
 import { collection, query, where, getDocs } from "firebase/firestore";
 import db from '../../firebaseconfig'
