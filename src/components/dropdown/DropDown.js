@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function DropDown() {
     return (
-        <div className="dropdown">
+        <div className="dropdown nav-drop">
             <a className="product btn dropdown-toggle"  id="dropdownMenuLink" data-bs-toggle="dropdown">
                 Productos
             </a>

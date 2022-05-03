@@ -33,6 +33,7 @@ function ContactModal() {
         try {
             const commentDTO = collection(db, 'comments')
             const commentFirebase = await addDoc(commentDTO, pastComment)
+            return commentFirebase;
         } catch (error) {
             console.log(error)
         }

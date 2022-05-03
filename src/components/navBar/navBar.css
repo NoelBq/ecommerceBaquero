@@ -94,7 +94,6 @@
   color: #2A3439;
 }
 
-
 .dropdown .btn {
   background: none;
   border: none;
@@ -197,13 +196,12 @@
 
   .custom-navbar .menu-items li {
     margin-bottom: 1.8rem;
-    font-size: 1rem;
     font-weight: 500;
   }
-
+ 
   button {
     width: fit-content;
-    margin-left: 1rem;
+ 
   }
 
   .logo {
@@ -211,6 +209,10 @@
     top: 12px;
     right: 15px;
     font-size: 1.7rem;
+  }
+
+  .dropdown .btn {
+    margin-left: -12px;
   }
 
   /* .badge {

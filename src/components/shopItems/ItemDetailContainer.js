@@ -13,12 +13,11 @@ function ItemDetailContainer() {
   const [product, setProduct] = useState({});
 
   const getProduct = async () => {
-
       try {
         const docRef = doc(db, "products", id);
         const productSnap = await getDoc(docRef);
         const productDTO = productSnap.data();
-        setProduct(productDTO)         
+        setProduct(productDTO)       
       } catch (error) {
           console.error(error);
       }
@@ -27,7 +26,7 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     getProduct();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
