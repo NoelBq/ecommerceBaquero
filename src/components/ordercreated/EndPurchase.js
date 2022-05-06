@@ -3,8 +3,15 @@ import './endpurchasemodal.css'
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import './endpurchasemodal.css'
 import LineLoader from '../loader/LineLoader';
+import { useNavigate } from "react-router-dom";
 
 function EndPurchase({ orderId }) {
+  let navigate = useNavigate();
+  function goHome() {
+    navigate("/");
+    window.location.reload();
+  }
+
   return (
 
     <>
@@ -28,7 +35,7 @@ function EndPurchase({ orderId }) {
       </div>
       <div className="modal-footer">
         <div className="success-modal-footer" >
-          <button className='back-home-btn' onClick={e => window.location.href = '/'}>Volver</button>
+          <button className='back-home-btn' onClick={goHome}>Volver</button>
         </div>
       </div>
     </>

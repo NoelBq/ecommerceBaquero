@@ -2,6 +2,9 @@
 # Introduction
 - Minimal is an ecommerce project for Coderhouse's ReactJS Course using ReactJS and Firebase
 
+## Demo
+
+[https://62702de651dc5f0523f1d077--nimble-cocada-c01e33.netlify.app/]
 ## :ledger: Index
 
 - [About](#beginner-about)
@@ -11,9 +14,8 @@
   - [Pre-Requisites](#notebook-pre-requisites)
   - [Branches](#cactus-branches)
 - [Technologies](#technologies)
-
-
-##  :beginner: About
+- 
+##   beginner: About
 Minimal Clothing  drows inspiration by a cosmopolitan woman who seeks functionality and practicality without giving up sophistication.### Our premise is "Les is More", we go  back to the basics and get rid of unnecessary ornamentation and decorations to let the quality of the fabrics, neutral colours and simple cuts take centre stage.
 
 ## :zap: Usage
